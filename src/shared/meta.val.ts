@@ -1,0 +1,16 @@
+import type { SelectorOfSchema } from "@valbuild/core";
+import { s, type t } from "../../val.config";
+
+export const metaSchema = s.object({
+  title: s.string().maxLength(100),
+  description: s.string().maxLength(160).multiline(),
+});
+
+export type MetaSchema = t.inferSchema<typeof metaSchema>;
+
+export const metaPreview = (val: SelectorOfSchema<typeof metaSchema>) => {
+  return {
+    title: val.title,
+    description: val.description,
+  };
+};

@@ -1,0 +1,56 @@
+{
+  "name": "{{projectName}}",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#/*": "./src/*"
+  },
+  "scripts": {
+    "dev": "vite dev --port 3000",
+    "build": "vite build",
+    "preview": "vite preview",
+    "generate-routes": "tsr generate",
+    "typecheck": "tsc --noEmit",
+    "validate": "val validate --fix",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "@tanstack/react-devtools": "^0.10.12",
+    "@tanstack/react-router": "^1.170.33",
+    "@tanstack/react-router-devtools": "^1.167.1",
+    "@tanstack/react-start": "^1.168.50",
+    "@valbuild/core": "0.122.0",
+    "@valbuild/tanstack": "0.124.0",
+    "prettier": "^3.9.6",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@tailwindcss/typography": "^0.5.16",
+    "@tanstack/devtools-vite": "^0.8.5",
+    "@tanstack/router-cli": "^1.167.34",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@valbuild/cli": "0.123.1",
+    "@valbuild/eslint-plugin": "0.108.0",
+    "@vitejs/plugin-react": "^6.0.1",
+    "eslint": "^10.10.0",
+    "typescript": "^6.0.2",
+    "typescript-eslint": "^8.48.0",
+    "vite": "^8.0.0"
+  },
+  "engines": {
+    "node": "^22.13.0 || >=23.5.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "lightningcss"
+    ]
+  }
+}
