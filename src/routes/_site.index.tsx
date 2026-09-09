@@ -1,4 +1,5 @@
-import { createFileRoute, notFound } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
+import { NotFound } from "../components/NotFound";
 import { AnySection } from "../components/sections/AnySection";
 import { useValRoute } from "../val/val.hooks";
 import pageVal from "./_site.index.val";
@@ -19,7 +20,16 @@ function Home() {
    */
   const pageContent = useValRoute(pageVal, {});
   if (!pageContent) {
-    throw notFound();
+    /*
+     * Returned, not thrown.
+     *
+     * `notFound()` is for a loader. Thrown from a component it escapes into the
+     * error boundary instead — the right page still renders, but every miss
+     * logs `Error in renderToReadableStream` during server rendering. Reading
+     * content in the component is Val's normal path, so a page with no entry
+     * has to be an ordinary render rather than an exception.
+     */
+    return <NotFound />;
   }
   return (
     <main className="page-wrap px-4 pt-10 pb-8">
