@@ -11,3 +11,6 @@ dist-ssr
 .vinxi
 __unconfig*
 todos.json
+
+# Val's local patch store: unpublished edits made in the Studio at /val.
+.val
