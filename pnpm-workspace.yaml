@@ -1,0 +1,9 @@
+minimumReleaseAgeExclude:
+  - '@valbuild/cli@0.133.0'
+  - '@valbuild/language-server@0.133.0'
+  - '@valbuild/mcp@0.133.0'
+  - '@valbuild/react@0.133.0'
+  - '@valbuild/server@0.133.0'
+  - '@valbuild/shared@0.133.0'
+  - '@valbuild/tanstack@0.133.0'
+  - '@valbuild/ui@0.133.0'
