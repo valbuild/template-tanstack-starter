@@ -1,0 +1,67 @@
+# Builds this site and publishes it to Val's platform, on every push to the
+# branch it publishes -- including the commits Val itself makes when an editor
+# presses Publish in the Studio.
+#
+# Needs one secret, VAL_PROJECT_TOKEN: the project token from the project's
+# settings on admin.val.build. It can publish this project and do nothing
+# else. Without it the job does nothing, so a copy of this repository that is
+# deployed somewhere else is not affected.
+#
+# `val publish` asks Val what to build against, builds the site and its
+# dependency layer from this checkout, uploads what Val does not already hold,
+# and has Val render a canary before the site changes. `val ci-report` then
+# tells the Studio how it went, so an editor whose publish did not reach the
+# site sees why, with a link to this run.
+name: Val publish
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# A newer push supersedes a build still running: the site should show the
+# newest commit, and a publish that is cancelled part way is resumed or
+# replaced by the next one rather than left half done.
+concurrency:
+  group: val-publish-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    # Not in the template repository itself, which is not a Val project.
+    if: github.repository != 'valbuild/template-tanstack-starter'
+    runs-on: ubuntu-latest
+    env:
+      VAL_PROJECT_TOKEN: ${{ secrets.VAL_PROJECT_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+        if: env.VAL_PROJECT_TOKEN != ''
+
+      - uses: pnpm/action-setup@v4
+        if: env.VAL_PROJECT_TOKEN != ''
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        if: env.VAL_PROJECT_TOKEN != ''
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+        if: env.VAL_PROJECT_TOKEN != ''
+
+      - name: Build and publish
+        if: env.VAL_PROJECT_TOKEN != ''
+        run: pnpm exec val publish
+
+      - name: Tell the Studio it failed
+        if: failure() && env.VAL_PROJECT_TOKEN != ''
+        run: pnpm exec val ci-report --status failed
+
+      - name: Tell the Studio it succeeded
+        if: success() && env.VAL_PROJECT_TOKEN != ''
+        run: pnpm exec val ci-report --status succeeded
