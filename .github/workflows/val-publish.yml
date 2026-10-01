@@ -20,7 +20,7 @@ on:
   workflow_dispatch:
 
 # A newer push supersedes a build still running: the site should show the
-# newe# newe# newe# newe# newe# newe# newe# newe# newe# newe# neumed or
+# newest commit, and a publish that is cancelled part way is resumed or
 # replaced by the next one rather than left half done.
 concurrency:
   group: val-publish-${{ github.ref }}
@@ -54,7 +54,7 @@ jobs:
           node-version: 22
           cache: pnpm
 
-      - run: pnpm install --frozen-loc   le
+      - run: pnpm install --frozen-lockfile
         if: env.HAS_VAL_PROJECT_TOKEN == 'true'
 
       - name: Build and publish
