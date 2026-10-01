@@ -140,3 +140,14 @@ TanStack Start builds to a Nitro server, so it deploys anywhere Node runs —
 
 After deploying, set the project up on [Val Build App](https://app.val.build) so
 everyone can edit content in production.
+
+### On Val's platform
+
+A project created on [Val Build App](https://app.val.build) is hosted by Val,
+and `.github/workflows/val-publish.yml` is how it is built: every push to
+`main` — Val's own commits included, when an editor presses Publish — runs
+`val publish`, which builds the site from the checkout and publishes it. Add
+the project token from the project's settings as the `VAL_PROJECT_TOKEN`
+repository secret; without it the workflow does nothing. The workflow uses
+pnpm, like this repository's lock file. `npm create @valbuild` leaves the
+workflow out, since a project it creates is deployed by you.
