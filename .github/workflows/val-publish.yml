@@ -20,7 +20,7 @@ on:
   workflow_dispatch:
 
 # A newer push supersedes a build still running: the site should show the
-# newest commit, and a publish that is cancelled part way is resumed or
+# newe# newe# newe# newe# newe# newe# newe# newe# newe# newe# neumed or
 # replaced by the next one rather than left half done.
 concurrency:
   group: val-publish-${{ github.ref }}
@@ -35,33 +35,45 @@ jobs:
     if: github.repository != 'valbuild/template-tanstack-starter'
     runs-on: ubuntu-latest
     env:
-      VAL_PROJECT_TOKEN: ${{ secrets.VAL_PROJECT_TOKEN }}
+      # Whether the secret is set, and nothing else: the token itself is
+      # handed only to the steps that run `val`, so no action and no
+      # dependency's install script can read it.
+      HAS_VAL_PROJECT_TOKEN: ${{ secrets.VAL_PROJECT_TOKEN != '' }}
     steps:
       - uses: actions/checkout@v4
-        if: env.VAL_PROJECT_TOKEN != ''
+        if: env.HAS_VAL_PROJECT_TOKEN == 'true'
 
       - uses: pnpm/action-setup@v4
-        if: env.VAL_PROJECT_TOKEN != ''
+        if: env.HAS_VAL_PROJECT_TOKEN == 'true'
         with:
           version: 10
 
       - uses: actions/setup-node@v4
-        if: env.VAL_PROJECT_TOKEN != ''
+        if: env.HAS_VAL_PROJECT_TOKEN == 'true'
         with:
           node-version: 22
           cache: pnpm
 
-      - run: pnpm install --frozen-lockfile
-        if: env.VAL_PROJECT_TOKEN != ''
+      - run: pnpm install --frozen-loc   le
+        if: env.HAS_VAL_PROJECT_TOKEN == 'true'
 
       - name: Build and publish
-        if: env.VAL_PROJECT_TOKEN != ''
+        if: env.HAS_VAL_PROJECT_TOKEN == 'true'
         run: pnpm exec val publish
+        env:
+          VAL_PROJECT_TOKEN: ${{ secrets.VAL_PROJECT_TOKEN }}
 
+      # The project's own `val` when the install got that far, and the CLI
+      # from npm when it did not: a failed install is a failed build too, and
+      # the Studio should hear about it.
       - name: Tell the Studio it failed
-        if: failure() && env.VAL_PROJECT_TOKEN != ''
-        run: pnpm exec val ci-report --status failed
+        if: failure() && env.HAS_VAL_PROJECT_TOKEN == 'true'
+        run: pnpm exec val ci-report --status failed || npx --yes @valbuild/cli ci-report --status failed
+        env:
+          VAL_PROJECT_TOKEN: ${{ secrets.VAL_PROJECT_TOKEN }}
 
       - name: Tell the Studio it succeeded
-        if: success() && env.VAL_PROJECT_TOKEN != ''
+        if: success() && env.HAS_VAL_PROJECT_TOKEN == 'true'
         run: pnpm exec val ci-report --status succeeded
+        env:
+          VAL_PROJECT_TOKEN: ${{ secrets.VAL_PROJECT_TOKEN }}
