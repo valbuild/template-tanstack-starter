@@ -49,12 +49,23 @@ function SiteLayout() {
         <Outlet />
       </Suspense>
       <Footer />
-      <TanStackDevtools
-        config={{ position: "bottom-left" }}
-        plugins={[
-          { name: "Tanstack Router", render: <TanStackRouterDevtoolsPanel /> },
-        ]}
-      />
+      {/*
+       * Development only. `vite build` strips the devtools anyway, through the
+       * `devtools()` plugin in vite.config.ts, but a site built without Vite
+       * (a site created on val.build, before its first publish) does not get
+       * that pass, and the panel showed to every visitor.
+       */}
+      {import.meta.env.DEV && (
+        <TanStackDevtools
+          config={{ position: "bottom-left" }}
+          plugins={[
+            {
+              name: "Tanstack Router",
+              render: <TanStackRouterDevtoolsPanel />,
+            },
+          ]}
+        />
+      )}
     </ValProvider>
   );
 }
