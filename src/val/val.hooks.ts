@@ -11,7 +11,8 @@ import { config } from "../../val.config";
  * file fails the build with "Import denied in server environment".
  *
  * They work in both places a component runs: during server rendering they
- * resolve the published content, and in a browser with Val Studio open they
+ * resolve the published content -- or, for an editor previewing, the draft
+ * `_site.tsx` hands `ValProvider` -- and in a browser with Val Studio open they
  * resolve what the editor currently holds, so an edit shows up as it is typed.
  * Content read this way is also click-to-editable on the page.
  */
