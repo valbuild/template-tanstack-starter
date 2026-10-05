@@ -1,0 +1,40 @@
+# Tells Val's platform that this template changed, so the seed every new
+# project on admin.val.build is cloned from is rebuilt from this commit.
+#
+# Without it the seed moved only when the platform itself was deployed, and new
+# projects were made from whatever the template looked like then -- while a
+# project that also asked for its code on GitHub got THIS repository's head.
+#
+# Runs only in valbuild/template-tanstack-starter. A repository made from this
+# template carries the file too, and there the job is skipped.
+#
+# Needs one secret, VAL_HOME_DISPATCH_TOKEN: a token that can start workflows
+# in valbuild/home (fine-grained, "Actions: read and write" on that repository
+# and nothing else). Missing, the job fails rather than passing quietly: a seed
+# that silently stops following this repository is the bug this exists for.
+name: Reseed on the platform
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  reseed:
+    if: github.repository == 'valbuild/template-tanstack-starter'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Ask valbuild/home to reseed
+        env:
+          GH_TOKEN: ${{ secrets.VAL_HOME_DISPATCH_TOKEN }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::error::VAL_HOME_DISPATCH_TOKEN is not set, so new projects keep the old seed. See the top of this file."
+            exit 1
+          fi
+          gh workflow run reseed-templates.yml \
+            --repo valbuild/home \
+            --field source="${{ github.repository }}@${{ github.sha }}"
