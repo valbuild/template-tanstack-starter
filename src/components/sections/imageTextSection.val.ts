@@ -3,7 +3,7 @@ import { proseSchema } from "../typography/prose.val";
 
 export const imageTextSection = s.object({
   type: s.literal("image-text"),
-  image: s.image(),
+  image: s.image().nullable(),
   title: s.string(),
   text: proseSchema,
 });

@@ -54,12 +54,7 @@ export default c.define(
               ],
             },
           ],
-          image: {
-            path: "/public/val/globe.svg",
-            width: 16,
-            height: 16,
-            mimeType: "image/svg+xml",
-          },
+          image: null,
         },
       ],
     },
