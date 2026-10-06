@@ -40,7 +40,7 @@
     "@types/react-dom": "^19.2.0",
     "@valbuild/cli": "0.141.1",
     "@valbuild/eslint-plugin": "0.125.0",
-    "@valbuild/tanstack-build": "0.139.0",
+    "@valbuild/tanstack-build": "0.140.1",
     "@vitejs/plugin-react": "^6.0.1",
     "eslint": "^10.10.0",
     "rolldown": "^1.2.11",
