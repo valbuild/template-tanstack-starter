@@ -24,11 +24,11 @@ importers:
         specifier: ^1.168.60
         version: 1.168.60(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(rolldown@1.2.11)(vite@8.3.0(@types/node@22.20.4)(jiti@2.7.0))
       '@valbuild/core':
-        specifier: 0.139.1
-        version: 0.139.1
+        specifier: 0.141.0
+        version: 0.141.0
       '@valbuild/tanstack':
-        specifier: 0.140.2
-        version: 0.140.2(@tanstack/react-router@1.170.41(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(@tanstack/react-start@1.168.60(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(rolldown@1.2.11)(vite@8.3.0(@types/node@22.20.4)(jiti@2.7.0)))(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+        specifier: 0.141.0
+        version: 0.141.0(@tanstack/react-router@1.170.41(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(@tanstack/react-start@1.168.60(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(rolldown@1.2.11)(vite@8.3.0(@types/node@22.20.4)(jiti@2.7.0)))(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       prettier:
         specifier: ^3.9.6
         version: 3.9.8
@@ -70,8 +70,8 @@ importers:
         specifier: ^19.2.0
         version: 19.3.0(@types/react@19.3.0)
       '@valbuild/cli':
-        specifier: 0.140.2
-        version: 0.140.2(@tanstack/router-generator@1.167.40)(@tanstack/router-plugin@1.168.42(@tanstack/react-router@1.170.41(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(rolldown@1.2.11)(vite@8.3.0(@types/node@22.20.4)(jiti@2.7.0)))(@types/react@19.3.0)(@valbuild/tanstack-build@0.139.0(@tanstack/router-generator@1.167.40)(@tanstack/router-plugin@1.168.42(@tanstack/react-router@1.170.41(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(rolldown@1.2.11)(vite@8.3.0(@types/node@22.20.4)(jiti@2.7.0)))(react@19.3.0)(rolldown@1.2.11))(eslint@10.11.0(jiti@2.7.0))(prettier@3.9.8)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(rolldown@1.2.11)(typescript@6.0.3)
+        specifier: 0.141.0
+        version: 0.141.0(@tanstack/router-generator@1.167.40)(@tanstack/router-plugin@1.168.42(@tanstack/react-router@1.170.41(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(rolldown@1.2.11)(vite@8.3.0(@types/node@22.20.4)(jiti@2.7.0)))(@types/react@19.3.0)(@valbuild/tanstack-build@0.139.0(@tanstack/router-generator@1.167.40)(@tanstack/router-plugin@1.168.42(@tanstack/react-router@1.170.41(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(rolldown@1.2.11)(vite@8.3.0(@types/node@22.20.4)(jiti@2.7.0)))(react@19.3.0)(rolldown@1.2.11))(eslint@10.11.0(jiti@2.7.0))(prettier@3.9.8)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(rolldown@1.2.11)(typescript@6.0.3)
       '@valbuild/eslint-plugin':
         specifier: 0.125.0
         version: 0.125.0(eslint@10.11.0(jiti@2.7.0))(typescript@6.0.3)
@@ -950,8 +950,8 @@ packages:
     resolution: {integrity: sha512-BoC8PiO4Hkdo0TVJh9Ntxr5MxPDI7/oFsrygN5ADelFSeXG/qgNuucIGA+L5Z6JpPTE/uRfcTWtscjbUaufepQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@valbuild/cli@0.140.2':
-    resolution: {integrity: sha512-1cMHSjyX9gdey9Ik28SOfShGFQLXQLOjhkbotnUfTLPPXHwo5FQVA0Fw0Z3HVQTAHFUTUA09GWRp9En9W6J8jA==}
+  '@valbuild/cli@0.141.0':
+    resolution: {integrity: sha512-1/FerPREQkIgS7y0qD/Rlu0ZTloZWs7AFWD0+cb/Ts3jvHFKglD6ZWY17Q+p2AS6+66bElA3+5yE13p0tmRkFw==}
     engines: {node: ^22.13.0 || >=23.5.0}
     hasBin: true
     peerDependencies:
@@ -971,8 +971,8 @@ packages:
       rolldown:
         optional: true
 
-  '@valbuild/core@0.139.1':
-    resolution: {integrity: sha512-BX2QFQGsoqsarb43/ou/noUo6WvPD//yGjCDPZxB9I3z1ZbHWEJGbzej6WT3TAqoKTYRggFl3kOQE9z8coOxhw==}
+  '@valbuild/core@0.141.0':
+    resolution: {integrity: sha512-Dun5ZnUipz2K3iKoePmHsyrGuhXFgiEIGtCbN2y1qAYU6ll0UmEabUbQXaOhWqGBX+9YF1yczVK6mxW/qSBNSw==}
 
   '@valbuild/eslint-plugin@0.125.0':
     resolution: {integrity: sha512-mxaW/2ZmFUhniMoSnet4VN1Uk2QcYQhaprp4oNIQru+zp6DKTdBn2g3ktLQ6JFJCge0f6NHxG9Cj60iJqW8Euw==}
@@ -981,17 +981,17 @@ packages:
       eslint: ^8.40.0 || ^9.0.0 || ^10.0.0
       typescript: 5 || 6
 
-  '@valbuild/language-server@0.140.2':
-    resolution: {integrity: sha512-nX3UiFCydmyfj3N1NEsHPSq77GXhxQ6KMk1uisiuxtzM6gd49l0b5bq8Sy/cHDULCao6hngbmX8y+bswMBUMkQ==}
+  '@valbuild/language-server@0.141.0':
+    resolution: {integrity: sha512-WcaGoY4gPox0vnGCN0P+4H7EzY7i8oLqS9e7dhm5HDSO7CH17R//xTHn6OHKL0j7lfhbe6IXCDnX9ydekklXNA==}
     engines: {node: ^20.19.0 || >=22}
     hasBin: true
 
-  '@valbuild/mcp@0.140.2':
-    resolution: {integrity: sha512-ygVUPHdg7yJNabtUqtqeEp8QtSB3XLJaVB4hAyiJkG3NYrHtDxcwTTjML+A/O9rxjekilEvwsxxO1vLfR0yPBg==}
+  '@valbuild/mcp@0.141.0':
+    resolution: {integrity: sha512-8SNmdqa7jDqj0SBXnUKqKY+Wo2nTAE/U8LS+viG9jbKxBKo9TpcvDHsep1euK+d2pd5XyAOv5xGf/J++nL+XSA==}
     engines: {node: ^20.19.0 || >=22}
 
-  '@valbuild/react@0.140.2':
-    resolution: {integrity: sha512-/945q0+VRblpKxonzuX2PzTtYyTEKcZOW9+FUHkzO1g4CZfV+aIG5FU8o93ZmogC20WN1eN2rdPxVn7dNdP61A==}
+  '@valbuild/react@0.141.0':
+    resolution: {integrity: sha512-7TYzZi4tH4A865ZmEr8a09sYVL1KnpoV7Qn5avukc9S7Xyhtz4gA4BY1KNaFh6XeabaKvmqiFNrc/zU6Ngk6IA==}
     peerDependencies:
       '@types/react': '*'
       react: '>=19.0.0'
@@ -1000,12 +1000,12 @@ packages:
       '@types/react':
         optional: true
 
-  '@valbuild/server@0.140.2':
-    resolution: {integrity: sha512-OMLjpsgjT32zwNZNBsq9OJEp5izq0pbZSYtih6zgLwSdcgY5xbN38qsKWQdfJZhDavOklXtqRWlJNGqNbm9hTQ==}
+  '@valbuild/server@0.141.0':
+    resolution: {integrity: sha512-fECgNw8Se+hCK9iYRbUAEbi40Gc8zuLONXGGTIOLZjJwI1jjjfvEHERzPsaZ2ZWit6shr5T3g6HnrL5cVcTR6Q==}
     engines: {node: ^20.19.0 || >=22}
 
-  '@valbuild/shared@0.140.2':
-    resolution: {integrity: sha512-kMIS4Wh5iFinYrD/LJIA9sWD83GKcSGpDs3dgRPVJMt1ReEpuPPAHvS6NTKIGbwO42cc6IfhTBGoTj5tsF39dg==}
+  '@valbuild/shared@0.141.0':
+    resolution: {integrity: sha512-D1ztFXVYaUz6E1Z3R5ftem8ABflmBFBGoVNGsjbzdf5wOnsakqIQsFYqSg6qrgTPA7dqd4bWE6s/HaQxlSYuCw==}
 
   '@valbuild/tanstack-build@0.139.0':
     resolution: {integrity: sha512-WtDpfSGGTu8PgVe7NLRMc41UAwIyk8iD31hPwB+bJNL/eXi88+gyQd07jpW6M/7CveuWYoQ/TNGZvM1GFrBBtg==}
@@ -1025,16 +1025,16 @@ packages:
       rolldown:
         optional: true
 
-  '@valbuild/tanstack@0.140.2':
-    resolution: {integrity: sha512-LwEhghko21P7yxxsAFfYF0oA3thd8QG7C5zQfnHj6fjzRS1DyTRfRGA4HIgu861r7dCCX9rAfDnhY8iP10/F8A==}
+  '@valbuild/tanstack@0.141.0':
+    resolution: {integrity: sha512-5mnV5IjaWI7YtB5LOv3NjwwBTof6WplX1j4thlSX/PnU5QhX+Z+aFJqLLChb5pThGFr6q1zB/oi67BMN0NMGnw==}
     peerDependencies:
       '@tanstack/react-router': '>=1.130.0'
       '@tanstack/react-start': '>=1.130.0'
       react: '>=19.0.0'
       react-dom: '>=19.0.0'
 
-  '@valbuild/ui@0.140.2':
-    resolution: {integrity: sha512-fm34ReVKuBnXV1a+eSCybI9Q3VLjwCi8Hq7VtucBrf+QbeVmpZClyL8Nz7rI5Sn/w4Q+t4nmVc51qxN8I4YRXw==}
+  '@valbuild/ui@0.141.0':
+    resolution: {integrity: sha512-3noLj+O5Gox/2W4x/FJJsJrxlKaVe5qceL4UXOx904eELJO8pnqfTDIYChymc7jCVOIONQyV7Rz60bZLi1Lmkg==}
     peerDependencies:
       '@types/express': '*'
       '@types/react': '*'
@@ -3190,13 +3190,13 @@ snapshots:
       '@typescript-eslint/types': 8.70.0
       eslint-visitor-keys: 5.0.1
 
-  '@valbuild/cli@0.140.2(@tanstack/router-generator@1.167.40)(@tanstack/router-plugin@1.168.42(@tanstack/react-router@1.170.41(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(rolldown@1.2.11)(vite@8.3.0(@types/node@22.20.4)(jiti@2.7.0)))(@types/react@19.3.0)(@valbuild/tanstack-build@0.139.0(@tanstack/router-generator@1.167.40)(@tanstack/router-plugin@1.168.42(@tanstack/react-router@1.170.41(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(rolldown@1.2.11)(vite@8.3.0(@types/node@22.20.4)(jiti@2.7.0)))(react@19.3.0)(rolldown@1.2.11))(eslint@10.11.0(jiti@2.7.0))(prettier@3.9.8)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(rolldown@1.2.11)(typescript@6.0.3)':
+  '@valbuild/cli@0.141.0(@tanstack/router-generator@1.167.40)(@tanstack/router-plugin@1.168.42(@tanstack/react-router@1.170.41(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(rolldown@1.2.11)(vite@8.3.0(@types/node@22.20.4)(jiti@2.7.0)))(@types/react@19.3.0)(@valbuild/tanstack-build@0.139.0(@tanstack/router-generator@1.167.40)(@tanstack/router-plugin@1.168.42(@tanstack/react-router@1.170.41(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(rolldown@1.2.11)(vite@8.3.0(@types/node@22.20.4)(jiti@2.7.0)))(react@19.3.0)(rolldown@1.2.11))(eslint@10.11.0(jiti@2.7.0))(prettier@3.9.8)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(rolldown@1.2.11)(typescript@6.0.3)':
     dependencies:
-      '@valbuild/core': 0.139.1
+      '@valbuild/core': 0.141.0
       '@valbuild/eslint-plugin': 0.125.0(eslint@10.11.0(jiti@2.7.0))(typescript@6.0.3)
-      '@valbuild/language-server': 0.140.2(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
-      '@valbuild/server': 0.140.2(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
-      '@valbuild/shared': 0.140.2
+      '@valbuild/language-server': 0.141.0(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      '@valbuild/server': 0.141.0(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      '@valbuild/shared': 0.141.0
       chalk: 6.0.0
       chokidar: 5.0.0
       fast-glob: 3.3.3
@@ -3219,7 +3219,7 @@ snapshots:
       - react
       - react-dom
 
-  '@valbuild/core@0.139.1':
+  '@valbuild/core@0.141.0':
     dependencies:
       ts-toolbelt: 9.6.0
 
@@ -3228,11 +3228,11 @@ snapshots:
       eslint: 10.11.0(jiti@2.7.0)
       typescript: 6.0.3
 
-  '@valbuild/language-server@0.140.2(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+  '@valbuild/language-server@0.141.0(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
     dependencies:
-      '@valbuild/core': 0.139.1
-      '@valbuild/server': 0.140.2(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
-      '@valbuild/shared': 0.140.2
+      '@valbuild/core': 0.141.0
+      '@valbuild/server': 0.141.0(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      '@valbuild/shared': 0.141.0
       typescript: 6.0.3
       vscode-languageserver: 10.1.1
       vscode-languageserver-textdocument: 1.0.14
@@ -3242,11 +3242,11 @@ snapshots:
       - react
       - react-dom
 
-  '@valbuild/mcp@0.140.2(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+  '@valbuild/mcp@0.141.0(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
     dependencies:
-      '@valbuild/core': 0.139.1
-      '@valbuild/server': 0.140.2(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
-      '@valbuild/shared': 0.140.2
+      '@valbuild/core': 0.141.0
+      '@valbuild/server': 0.141.0(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      '@valbuild/shared': 0.141.0
       minimatch: 10.2.6
       zod: 4.6.5
     transitivePeerDependencies:
@@ -3255,11 +3255,11 @@ snapshots:
       - react
       - react-dom
 
-  '@valbuild/react@0.140.2(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+  '@valbuild/react@0.141.0(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
     dependencies:
-      '@valbuild/core': 0.139.1
-      '@valbuild/shared': 0.140.2
-      '@valbuild/ui': 0.140.2(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      '@valbuild/core': 0.141.0
+      '@valbuild/shared': 0.141.0
+      '@valbuild/ui': 0.141.0(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@vercel/stega': 1.1.0
       base64-arraybuffer: 1.0.2
       react: 19.3.0
@@ -3269,11 +3269,11 @@ snapshots:
     transitivePeerDependencies:
       - '@types/express'
 
-  '@valbuild/server@0.140.2(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+  '@valbuild/server@0.141.0(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
     dependencies:
-      '@valbuild/core': 0.139.1
-      '@valbuild/shared': 0.140.2
-      '@valbuild/ui': 0.140.2(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      '@valbuild/core': 0.141.0
+      '@valbuild/shared': 0.141.0
+      '@valbuild/ui': 0.141.0(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       chokidar: 5.0.0
       image-size: 2.0.4
       minimatch: 10.2.6
@@ -3287,9 +3287,9 @@ snapshots:
       - react
       - react-dom
 
-  '@valbuild/shared@0.140.2':
+  '@valbuild/shared@0.141.0':
     dependencies:
-      '@valbuild/core': 0.139.1
+      '@valbuild/core': 0.141.0
       flexsearch: 0.8.212
       zod: 4.6.5
       zod-validation-error: 5.0.0(zod@4.6.5)
@@ -3304,24 +3304,24 @@ snapshots:
       react: 19.3.0
       rolldown: 1.2.11
 
-  '@valbuild/tanstack@0.140.2(@tanstack/react-router@1.170.41(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(@tanstack/react-start@1.168.60(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(rolldown@1.2.11)(vite@8.3.0(@types/node@22.20.4)(jiti@2.7.0)))(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+  '@valbuild/tanstack@0.141.0(@tanstack/react-router@1.170.41(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(@tanstack/react-start@1.168.60(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(rolldown@1.2.11)(vite@8.3.0(@types/node@22.20.4)(jiti@2.7.0)))(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
     dependencies:
       '@tanstack/react-router': 1.170.41(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@tanstack/react-start': 1.168.60(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(rolldown@1.2.11)(vite@8.3.0(@types/node@22.20.4)(jiti@2.7.0))
-      '@valbuild/core': 0.139.1
-      '@valbuild/language-server': 0.140.2(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
-      '@valbuild/mcp': 0.140.2(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
-      '@valbuild/react': 0.140.2(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
-      '@valbuild/server': 0.140.2(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
-      '@valbuild/shared': 0.140.2
-      '@valbuild/ui': 0.140.2(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      '@valbuild/core': 0.141.0
+      '@valbuild/language-server': 0.141.0(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      '@valbuild/mcp': 0.141.0(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      '@valbuild/react': 0.141.0(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      '@valbuild/server': 0.141.0(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      '@valbuild/shared': 0.141.0
+      '@valbuild/ui': 0.141.0(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
     transitivePeerDependencies:
       - '@types/express'
       - '@types/react'
 
-  '@valbuild/ui@0.140.2(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
+  '@valbuild/ui@0.141.0(@types/react@19.3.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)':
     dependencies:
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
