@@ -12,7 +12,7 @@ export function ImageTextSection({
   return (
     <Section>
       <div className="flex flex-wrap gap-4">
-        <ValImage src={image} className="w-1/3" />
+        {image && <ValImage src={image} className="w-1/3" />}
         <div>
           <Heading2>{title}</Heading2>
           <Prose value={text} />
